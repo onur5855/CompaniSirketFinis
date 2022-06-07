@@ -88,8 +88,9 @@ namespace CompaniSirket.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Tc")
-                        .HasColumnType("int");
+                    b.Property<string>("Tc")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 

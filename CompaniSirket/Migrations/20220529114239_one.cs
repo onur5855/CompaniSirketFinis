@@ -36,7 +36,7 @@ namespace CompaniSirket.Migrations
                     Adi = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Soyadi = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DogumTarihi = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Tc = table.Column<int>(type: "int", nullable: false),
+                    Tc = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Maas = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     EgitimDurumu = table.Column<int>(type: "int", nullable: false),
                     CompanyID = table.Column<int>(type: "int", nullable: false),

@@ -1,0 +1,52 @@
+﻿@model CompaniSirket.DataTransferObject.CompanyCreateDTO
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Company</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kurucu_Adi" class="control-label"></label>
+                <input asp-for="Kurucu_Adi" class="form-control" />
+                <span asp-validation-for="Kurucu_Adi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kurucu_Soyadi" class="control-label"></label>
+                <input asp-for="Kurucu_Soyadi" class="form-control" />
+                <span asp-validation-for="Kurucu_Soyadi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kurulum_Tarihi" class="control-label"></label>
+                <input asp-for="Kurulum_Tarihi" class="form-control" />
+                <span asp-validation-for="Kurulum_Tarihi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adres_Bilgileri" class="control-label"></label>
+                <input asp-for="Adres_Bilgileri" class="form-control" />
+                <span asp-validation-for="Adres_Bilgileri" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CompaniSirket.Migrations
 {
     [DbContext(typeof(Contex))]
-    [Migration("20220528105003_one")]
+    [Migration("20220529114239_one")]
     partial class one
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -90,8 +90,9 @@ namespace CompaniSirket.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Tc")
-                        .HasColumnType("int");
+                    b.Property<string>("Tc")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 

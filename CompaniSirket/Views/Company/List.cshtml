@@ -1,0 +1,61 @@
+﻿@model IEnumerable<CompaniSirket.Models.Entity.Entitiler.Company>
+
+@{
+    ViewData["Title"] = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>List</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kurucu_Adi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kurucu_Soyadi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kurulum_Tarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adres_Bilgileri)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)    
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kurucu_Adi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kurucu_Soyadi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kurulum_Tarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adres_Bilgileri)
+            </td>            
+            <td>
+                <a asp-action="Update" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
